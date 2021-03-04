@@ -1,20 +1,20 @@
 install:
-  	npm install
+				npm install
 
 publish:
-  	npm publish ./ --dry-run
+				npm publish ./ --dry-run
 
 link:
-		npm link
+				npm link
 
 unlink:
-		npm unlink
+				npm unlink
 
 lint:
-  	npx eslint .
+				npx eslint .
 
 test:
-		npx -n --experimental-vm-modules jest --no-warnings
+				npx -n --experimental-vm-modules jest --no-warnings
 
 gendiff:
-		node bin/gendiff.js
+				node bin/gendiff.js
