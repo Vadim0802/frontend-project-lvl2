@@ -1,7 +1,8 @@
 import fs from 'fs';
+import path from 'path';
 
-const getFileData = (path) => {
-  const readFile = fs.readFileSync(path, 'utf-8');
+const getFileData = (pathFile) => {
+  const readFile = fs.readFileSync(path.resolve(process.cwd(), pathFile), 'utf-8');
 
   return JSON.parse(readFile);
 };
