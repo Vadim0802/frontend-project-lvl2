@@ -14,7 +14,7 @@ lint:
 	npx eslint .
 
 test:
-	npx -n --experimental-vm-modules jest --no-warnings
+	npm test
 
 gendiff:
 	node bin/gendiff.js
