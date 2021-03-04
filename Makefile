@@ -14,4 +14,4 @@ lint:
   npx eslint
 
 gendiff:
-	node src/bin/gendiff.js
+	node bin/gendiff.js
