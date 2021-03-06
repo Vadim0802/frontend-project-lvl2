@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const getTreeChanges = (before, after) => {
-  const keys = _.union(Object.keys(before), Object.keys(after));
+  const keys = _.union(Object.keys(before), Object.keys(after)).sort();
 
   return keys.map((key) => {
     if (!_.has(before, key)) {
@@ -12,6 +12,12 @@ const getTreeChanges = (before, after) => {
     if (!_.has(after, key)) {
       return {
         key, state: 'deleted', value: before[key],
+      };
+    }
+    if (_.isPlainObject(before[key]) && _.isPlainObject(after[key])) {
+      const children = getTreeChanges(before[key], after[key]);
+      return {
+        key, state: 'nested', children,
       };
     }
     if (!_.isEqual(before[key], after[key])) {
