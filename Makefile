@@ -16,5 +16,8 @@ lint:
 test:
 	npm test
 
+test-coverage:
+	npm run test-coverage
+
 gendiff:
 	node bin/gendiff.js
