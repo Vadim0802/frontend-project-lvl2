@@ -12,3 +12,9 @@ test('genDiff json', () => {
   const diff = genDiff(pathToFixtures('file1.json'), pathToFixtures('file2.json'));
   expect(diff).toBe(expected);
 });
+
+test('genDiff yml', () => {
+  const expected = fs.readFileSync(pathToFixtures('expected_file_yml.txt'), 'utf-8');
+  const diff = genDiff(pathToFixtures('file1.yml'), pathToFixtures('file2.yml'));
+  expect(diff).toBe(expected);
+});
