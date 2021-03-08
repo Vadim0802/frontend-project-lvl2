@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const getTreeChanges = (before, after) => {
-  const keys = _.union(Object.keys(before), Object.keys(after)).concat().sort();
+  const keys = _.sortBy(_.union(Object.keys(before), Object.keys(after)));
 
   return keys.map((key) => {
     if (!_.has(before, key)) {
