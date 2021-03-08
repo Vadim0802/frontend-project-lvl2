@@ -11,6 +11,6 @@ export default (data, formatName) => {
     case 'json':
       return json(data);
     default:
+      throw new Error('Invalid format');
   }
-  return stylish(data);
 };
