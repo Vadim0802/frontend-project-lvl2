@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/Vadim0802/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/Vadim0802/frontend-project-lvl2/actions)",
-  "main": "src/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "cross-env NODE_OPTIONS='--experimental-vm-modules --no-warnings' npx jest",
     "test-watch": "cross-env NODE_OPTIONS='--experimental-vm-modules --no-warnings' npx jest --watch",
